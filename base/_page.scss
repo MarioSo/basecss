@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+/**
+ * 1. Set default font to the one given in the configuration.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 3. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 4. Ensure the page always fills at least the entire height of the viewport.
+ * 5. Prevent certain mobile browsers from automatically zooming fonts.
+ * 6. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+	background-color: $base-background-color;
+	color: $base-text-color;
+	overflow-y: scroll; /* [3] */
+	min-height: 100%; /* [4] */
+	-webkit-text-size-adjust: 100%; /* [5] */
+	-ms-text-size-adjust: 100%; /* [5] */
+	-moz-osx-font-smoothing: grayscale; /* [6] */
+	-webkit-font-smoothing: antialiased; /* [6] */
+}

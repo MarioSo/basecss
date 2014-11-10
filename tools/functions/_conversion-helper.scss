@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $CONVERSION HELPER
+\*------------------------------------*/
+/**
+ * Got px? Need em? Here we go.
+ *
+ * Dependencies: $base-font-sizes musst be defined in e.g. _defaults.scss.
+ */
+
+
+/*
+ * Convert PX units to EMs.
+ *
+ * Usage: margin-right: pem(16);
+*/
+@function pem($pxval, $base: $base-font-size) {
+  @return #{$pxval / $base}em;
+}

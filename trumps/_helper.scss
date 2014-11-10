@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    $HELPER
+\*------------------------------------*/
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn't already have a class to which you could apply this
+ * styling, e.g. if you need to float '.main-nav' left then add 'float:left;' to
+ * that ruleset as opposed to adding the '.float--left' class to the markup.
+ *
+ * A lot of these classes carry '!important' as you will always want them to win
+ * out over other selectors.
+ */
+
+
+/**
+ * Add/remove floats
+ */
+.float--right   { float: right; }
+.float--left    { float: left; }
+.float--none    { float: none; }
+
+/**
+ * color your life.
+ */
+.color--highlight{ color: $primary-highlight-color; }
+
+/**
+ * Text alignment
+ */
+.text--left     { text-align: left; }
+.text--center   { text-align: center; }
+.text--right    { text-align: right; }
+
+/**
+ * Apply capital case to an element (usually a 'strong').
+ */
+.caps {
+    text-transform: uppercase;
+}
+
+.lowercase{
+    text-transform: lowercase;
+}
+
+.display-block{
+    display: block;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+.will-animate{
+    transform: translate3d(0, 0, 0);
+}
+
+// .hide{
+//     @include opacity(0);
+// }
+/**
+ * Hide content off-screen without resorting to 'display:none;', also provide
+ * breakpoint specific hidden elements.
+ */
+@mixin visuallyhidden {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+.visuallyhidden {
+    @include visuallyhidden;
+}
