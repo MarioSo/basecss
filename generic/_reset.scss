@@ -28,8 +28,20 @@ dl,dd,ol,ul,
 form,fieldset,legend,
 table,th,td,caption,
 hr {
-    margin: 0;
-    padding: 0;
+
+    @if $vertical-rhythm == true {
+        /**
+         * Where `margin-bottom` is concerned,this value will be the same as the
+         * base line-height. This allows us to keep a consistent vertical rhythm.
+         * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+         */
+        margin-bottom: $inuit-base-spacing-unit;
+        margin-bottom: ($inuit-base-spacing-unit / $inuit-base-font-size) * 1rem;
+    } @else {
+        margin: 0;
+        padding: 0;
+
+    }
 }
 
 ul{
