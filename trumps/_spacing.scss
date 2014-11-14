@@ -11,85 +11,84 @@
 
 @if $generate-spacing == true{
 
-	$basecss-margin: $base-spacing-unit !default;
-	$basecss-margin-tiny: halv($basecss-margin);
-	$basecss-margin-huge: double($basecss-margin);
+	$basecss-spacing: $base-spacing-unit !default;
+	$basecss-spacing-tiny: halv($basecss-margin);
+	$basecss-spacing-huge: double($basecss-margin);
 
-
-	.m	{ margin:           $basecss-margin; }
-	.mt	{ margin-top:       $basecss-margin; }
-	.mr	{ margin-right:     $basecss-margin; }
-	.mb	{ margin-bottom:    $basecss-margin; }
-	.ml	{ margin-left:      $basecss-margin; }
-	.mh	{ margin-right:     $basecss-margin; margin-left:      $basecss-margin; }
-	.mv	{ margin-top:       $basecss-margin; margin-bottom:    $basecss-margin; }
+	.m	{ margin:           $basecss-spacing !important; }
+	.mt	{ margin-top:       $basecss-spacing !important; }
+	.mr	{ margin-right:     $basecss-spacing !important; }
+	.mb	{ margin-bottom:    $basecss-spacing !important; }
+	.ml	{ margin-left:      $basecss-spacing !important; }
+	.mh	{ margin-right:     $basecss-spacing !important; margin-left:      $basecss-spacing !important; }
+	.mv	{ margin-top:       $basecss-spacing !important; margin-bottom:    $basecss-spacing !important; }
 
 	@if $generate-spacing-tiny == true{
-		.m-		{ margin:           $basecss-margin-tiny; }
-		.mt-	{ margin-top:       $basecss-margin-tiny; }
-		.mr-	{ margin-right:     $basecss-margin-tiny; }
-		.mb-	{ margin-bottom:    $basecss-margin-tiny; }
-		.ml-	{ margin-left:      $basecss-margin-tiny; }
-		.mh-	{ margin-right:     $basecss-margin-tiny; margin-left:      $basecss-margin-tiny; }
-		.mv- 	{ margin-top:       $basecss-margin-tiny; margin-bottom:    $basecss-margin-tiny; }
+		.m-		{ margin:           $basecss-spacing-tiny !important; }
+		.mt-	{ margin-top:       $basecss-spacing-tiny !important; }
+		.mr-	{ margin-right:     $basecss-spacing-tiny !important; }
+		.mb-	{ margin-bottom:    $basecss-spacing-tiny !important; }
+		.ml-	{ margin-left:      $basecss-spacing-tiny !important; }
+		.mh-	{ margin-right:     $basecss-spacing-tiny !important; margin-left:      $basecss-spacing-tiny !important; }
+		.mv- 	{ margin-top:       $basecss-spacing-tiny !important; margin-bottom:    $basecss-spacing-tiny !important; }
 	}
 
 	@if $generate-spacing-huge == true{
-		.m\+	{ margin:           $basecss-margin-huge; }
-		.mt\+	{ margin-top:       $basecss-margin-huge; }
-		.mr\+	{ margin-right:     $basecss-margin-huge; }
-		.mb\+	{ margin-bottom:    $basecss-margin-huge; }
-		.ml\+	{ margin-left:      $basecss-margin-huge; }
-		.mh\+	{ margin-right:     $basecss-margin-huge; margin-left:      $basecss-margin-huge; }
-		.mv\+ { margin-top:       $basecss-margin-huge; margin-bottom:    $basecss-margin-huge; }
+		.m\+	{ margin:           $basecss-spacing-huge !important; }
+		.mt\+	{ margin-top:       $basecss-spacing-huge !important; }
+		.mr\+	{ margin-right:     $basecss-spacing-huge !important; }
+		.mb\+	{ margin-bottom:    $basecss-spacing-huge !important; }
+		.ml\+	{ margin-left:      $basecss-spacing-huge !important; }
+		.mh\+	{ margin-right:     $basecss-spacing-huge !important; margin-left:      $basecss-spacing-huge !important; }
+		.mv\+ { margin-top:       $basecss-spacing-huge !important; margin-bottom:    $basecss-spacing-huge !important; }
 	}
 
 	@if $generate-spacing-flush == true{
-		.m0		{ margin:           0; }
-		.mt0	{ margin-top:       0; }
-		.mr0	{ margin-right:     0; }
-		.mb0	{ margin-bottom:    0; }
-		.ml0	{ margin-left:      0; }
-		.mh0	{ margin-right:     0; margin-left:      0; }
-		.mv0 	{ margin-top:       0; margin-bottom:    0; }
+		.m0		{ padding:           0 !important; }
+		.mt0	{ padding-top:       0 !important; }
+		.mr0	{ padding-right:     0 !important; }
+		.mb0	{ padding-bottom:    0 !important; }
+		.ml0	{ padding-left:      0 !important; }
+		.mh0	{ padding-right:     0 !important; padding-left:      0 !important; }
+		.mv0 	{ padding-top:       0 !important; padding-bottom:    0 !important; }
 	}
 
-	.p	{ margin:           $basecss-margin; }
-	.pt	{ margin-top:       $basecss-margin; }
-	.pr	{ margin-right:     $basecss-margin; }
-	.pb	{ margin-bottom:    $basecss-margin; }
-	.pl	{ margin-left:      $basecss-margin; }
-	.ph	{ margin-right:     $basecss-margin; margin-left:      $basecss-margin; }
-	.pv	{ margin-top:       $basecss-margin; margin-bottom:    $basecss-margin; }
+	.p	{ padding:           $basecss-spacing !important; }
+	.pt	{ padding-top:       $basecss-spacing !important; }
+	.pr	{ padding-right:     $basecss-spacing !important; }
+	.pb	{ padding-bottom:    $basecss-spacing !important; }
+	.pl	{ padding-left:      $basecss-spacing !important; }
+	.ph	{ padding-right:     $basecss-spacing !important; padding-left:      $basecss-spacing !important; }
+	.pv	{ padding-top:       $basecss-spacing !important; padding-bottom:    $basecss-spacing !important; }
 
 	@if $generate-spacing-tiny == true{
-		.p-		{ margin:           $basecss-margin-tiny; }
-		.pt-	{ margin-top:       $basecss-margin-tiny; }
-		.pr-	{ margin-right:     $basecss-margin-tiny; }
-		.pb-	{ margin-bottom:    $basecss-margin-tiny; }
-		.pl-	{ margin-left:      $basecss-margin-tiny; }
-		.ph-	{ margin-right:     $basecss-margin-tiny; margin-left:      $basecss-margin-tiny; }
-		.pv- 	{ margin-top:       $basecss-margin-tiny; margin-bottom:    $basecss-margin-tiny; }
+		.p-		{ padding:           $basecss-spacing-tiny !important; }
+		.pt-	{ padding-top:       $basecss-spacing-tiny !important; }
+		.pr-	{ padding-right:     $basecss-spacing-tiny !important; }
+		.pb-	{ padding-bottom:    $basecss-spacing-tiny !important; }
+		.pl-	{ padding-left:      $basecss-spacing-tiny !important; }
+		.ph-	{ padding-right:     $basecss-spacing-tiny !important; padding-left:      $basecss-spacing-tiny !important; }
+		.pv- 	{ padding-top:       $basecss-spacing-tiny !important; padding-bottom:    $basecss-spacing-tiny !important; }
 	}
 
 	@if $generate-spacing-tiny == true{
-		.p\+	{ margin:           $basecss-margin-huge; }
-		.pt\+	{ margin-top:       $basecss-margin-huge; }
-		.pr\+	{ margin-right:     $basecss-margin-huge; }
-		.pb\+	{ margin-bottom:    $basecss-margin-huge; }
-		.pl\+	{ margin-left:      $basecss-margin-huge; }
-		.ph\+	{ margin-right:     $basecss-margin-huge; margin-left:      $basecss-margin-huge; }
-		.pv\+ { margin-top:       $basecss-margin-huge; margin-bottom:    $basecss-margin-huge; }
+		.p\+	{ padding:           $basecss-spacing-huge !important; }
+		.pt\+	{ padding-top:       $basecss-spacing-huge !important; }
+		.pr\+	{ padding-right:     $basecss-spacing-huge !important; }
+		.pb\+	{ padding-bottom:    $basecss-spacing-huge !important; }
+		.pl\+	{ padding-left:      $basecss-spacing-huge !important; }
+		.ph\+	{ padding-right:     $basecss-spacing-huge !important; padding-left:      $basecss-spacing-huge !important; }
+		.pv\+ { padding-top:       $basecss-spacing-huge !important; padding-bottom:    $basecss-spacing-huge !important; }
 	}
 
 	@if $generate-spacing-flush == true{
-		.p0		{ margin:           0; }
-		.pt0	{ margin-top:       0; }
-		.pr0	{ margin-right:     0; }
-		.pb0	{ margin-bottom:    0; }
-		.pl0	{ margin-left:      0; }
-		.ph0	{ margin-right:     0; margin-left:      0; }
-		.pv0 	{ margin-top:       0; margin-bottom:    0; }
+		.p0		{ padding:           0 !important; }
+		.pt0	{ padding-top:       0 !important; }
+		.pr0	{ padding-right:     0 !important; }
+		.pb0	{ padding-bottom:    0 !important; }
+		.pl0	{ padding-left:      0 !important; }
+		.ph0	{ padding-right:     0 !important; padding-left:      0 !important; }
+		.pv0 	{ padding-top:       0 !important; padding-bottom:    0 !important; }
 	}
 
 }

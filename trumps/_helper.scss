@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $HELPER
+	$HELPER
 \*------------------------------------*/
 /**
  * A series of helper classes to use arbitrarily. Only use a helper class if an
@@ -15,62 +15,58 @@
 /**
  * Add/remove floats
  */
-.float--right   { float: right; }
-.float--left    { float: left; }
-.float--none    { float: none; }
+.float					{ float: left !important; }
+.float--right		{ float: right !important; }
+.float--none		{ float: none !important; }
 
 /**
  * color your life.
  */
-.color--highlight{ color: $primary-highlight-color; }
+.color--highlight { color: $primary-highlight-color !important; }
 
 /**
  * Text alignment
  */
-.text--left     { text-align: left; }
-.text--center   { text-align: center; }
-.text--right    { text-align: right; }
+.text--left     { text-align: left !important; }
+.text--center   { text-align: center !important; }
+.text--right    { text-align: right !important; }
 
 /**
  * Apply capital case to an element (usually a 'strong').
  */
 .caps {
-    text-transform: uppercase;
+	text-transform: uppercase !important;
 }
 
 .lowercase{
-    text-transform: lowercase;
+	text-transform: lowercase !important;
 }
 
-.display-block{
-    display: block;
-}
-
-.border-box{
-    box-sizing: border-box;
+.bb{
+	box-sizing: border-box !important;
 }
 
 .will-animate{
-    transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 
-// .hide{
-//     @include opacity(0);
-// }
+.hide{
+	display: none !important;
+}
 /**
  * Hide content off-screen without resorting to 'display:none;', also provide
  * breakpoint specific hidden elements.
  */
 @mixin visuallyhidden {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
 }
 .visuallyhidden {
-    @include visuallyhidden;
+	@include visuallyhidden;
 }

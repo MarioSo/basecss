@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #PAGE
+		#PAGE
 \*------------------------------------*/
 
 /**
@@ -15,9 +15,9 @@
  *    render text using sub-pixel anti-aliasing.
  */
 html {
-  font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+	font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
 	background-color: $base-background-color;
 	color: $base-text-color;
 	overflow-y: scroll; /* [3] */

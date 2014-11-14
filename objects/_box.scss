@@ -1,0 +1,20 @@
+/*------------------------------------*\
+		#BOX
+\*------------------------------------*/
+
+/**
+ * The box object simply boxes off content.
+ */
+
+/**
+ * 1. So we can apply the `.box` class to naturally-inline elements.
+ */
+.box,
+%box {
+		display: block; /* [1] */
+		padding: $base-spacing-unit;
+
+		> :last-child {
+				margin-bottom: 0;
+		}
+}

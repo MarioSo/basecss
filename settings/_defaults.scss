@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $DEFAULTS
+	$DEFAULTS
 \*------------------------------------*/
 /**
  * Default variables. Do not to override them here.
@@ -11,7 +11,7 @@
 
 $ie8-support: false !default;
 /*------------------------------------*\
-    $DEBUG
+	$DEBUG
 \*------------------------------------*/
 /**
  * Debug mode will visually highlight any potential markup/accessibility quirks
@@ -24,7 +24,7 @@ $debug-mode:        false !default;
 
 
 /*------------------------------------*\
-    $BORDER-BOX
+	$BORDER-BOX
 \*------------------------------------*/
 /**
  * Do you want all elements to adopt 'box-sizing:border-box;' as per
@@ -36,7 +36,7 @@ $global-border-box: false !default;
 
 
 /*------------------------------------*\
-    $BASE
+	$BASE
 \*------------------------------------*/
 /**
  * Base stuff
@@ -53,7 +53,7 @@ $lead-size: 1.125 !default;
 
 
 /*------------------------------------*\
-    $FONT-SIZES
+	$FONT-SIZES
 \*------------------------------------*/
 /**
  * Font-sizes (in pixels). Refer to relevant sections for their implementations.
@@ -108,7 +108,7 @@ $primary-highlight-color: #000 !default;
 
 
 /*------------------------------------*\
-    $RESPONSIVE
+	$RESPONSIVE
 \*------------------------------------*/
 // $site-is-responsive: true!default;
 
@@ -138,12 +138,12 @@ $desk-wide-start:   1200px!default;
 
 // Hold our breakpoint aliases and conditions in a list.
 $breakpoints: (
-    "palm"          "screen and (max-width: 719px)",
-    "lap"           "screen and (min-width: 720px) and (max-width: 1023px)",
-    "lap-and-up"    "screen and (min-width: 720px)",
-    "portable"      "screen and (max-width: 1023px)",
-    "desk"          "screen and (min-width: 1024px)",
-    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+	"palm"          "screen and (max-width: 719px)",
+	"lap"           "screen and (min-width: 720px) and (max-width: 1023px)",
+	"lap-and-up"    "screen and (min-width: 720px)",
+	"portable"      "screen and (max-width: 1023px)",
+	"desk"          "screen and (min-width: 1024px)",
+	"retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
 ) !default;
 
 
@@ -175,7 +175,7 @@ $responsive-twelfths:   false !default;
 
 
 /*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS
+	$OBJECTS AND ABSTRACTIONS
 \*------------------------------------*/
 /**
  * Which objects and abstractions would you like to use?

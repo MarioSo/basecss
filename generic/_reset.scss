@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $RESET
+	$RESET
 \*------------------------------------*/
 /**
  * A more considered reset; more of a restart...
@@ -7,16 +7,16 @@
  */
 
 @if $global-border-box == true {
-    /**
-    * Let's make the box model all nice, shall we...?
-    */
-    * {
-        &,
-        &:before,
-        &:after {
-            box-sizing: border-box;
-        }
-    }
+	/**
+	* Let's make the box model all nice, shall we...?
+	*/
+	* {
+		&,
+		&:before,
+		&:after {
+			box-sizing: border-box;
+		}
+	}
 }
 
 /**
@@ -27,39 +27,39 @@ p,blockquote,pre,
 dl,dd,ol,ul,
 form,fieldset,legend,
 table,th,td,caption,
-hr {
+hr,
+.box,
+.block {
 
-    @if $vertical-rhythm == true {
-        /**
-         * Where `margin-bottom` is concerned,this value will be the same as the
-         * base line-height. This allows us to keep a consistent vertical rhythm.
-         * As per: csswizardry.com/2012/06/single-direction-margin-declarations
-         */
-        margin-bottom: $inuit-base-spacing-unit;
-        margin-bottom: ($inuit-base-spacing-unit / $inuit-base-font-size) * 1rem;
-    } @else {
-        margin: 0;
-        padding: 0;
-
-    }
+	margin: 0;
+	padding: 0;
+	@if $vertical-rhythm == true {
+		/**
+		 * Where `margin-bottom` is concerned,this value will be the same as the
+		 * base line-height. This allows us to keep a consistent vertical rhythm.
+		 * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+		 */
+		margin-bottom: $base-spacing-unit;
+		margin-bottom: ($base-spacing-unit / $base-font-size) * 1rem;
+	}
 }
 
 ul{
-    list-style-type: none;
+	list-style-type: none;
 }
 
 /**
  * Give a help cursor to elements that give extra info on ':hover'.
  */
 abbr[title], dfn[title]{
-    cursor: help;
+	cursor: help;
 }
 
 /**
  * Remove underlines from potentially troublesome elements.
  */
 u,ins {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 
@@ -72,12 +72,12 @@ textarea,
 button,
 select,
 option{
-    cursor: pointer;
+	cursor: pointer;
 }
-    .input--text:active,
-    .input--text:focus,
-    textarea:active,
-    textarea:focus{
-        cursor: text;
-        outline: none;
-    }
+	.input--text:active,
+	.input--text:focus,
+	textarea:active,
+	textarea:focus{
+		cursor: text;
+		outline: none;
+	}

@@ -1,0 +1,15 @@
+/*------------------------------------*\
+	#BLOCK
+\*------------------------------------*/
+
+/**
+ * The block object simply stacks an image on top of some text-like content.
+ */
+
+/**
+ * Display as block
+ */
+.block,
+%block {
+	display: block;
+}
