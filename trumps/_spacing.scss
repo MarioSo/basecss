@@ -3,6 +3,12 @@
 \*------------------------------------*/
 
 /**
+ * Dependencies:
+ * - tools/function/_math-helper.scss
+ * - tools/function/_conversion-helper.scss
+ */
+
+/**
  * Margin and padding helper classes. Use these to tweak layout on a micro
  * level.
  *
@@ -11,9 +17,11 @@
 
 @if $generate-spacing == true{
 
-	$basecss-spacing: $base-spacing-unit !default;
-	$basecss-spacing-tiny: halv($basecss-margin);
-	$basecss-spacing-huge: double($basecss-margin);
+	$basecss-spacing: pem($base-spacing-unit)!default;
+
+	$basecss-spacing-tiny: pem(halve($base-spacing-unit)) !default;
+	$basecss-spacing-huge: pem(double($base-spacing-unit)) !default;
+
 
 	.m	{ margin:           $basecss-spacing !important; }
 	.mt	{ margin-top:       $basecss-spacing !important; }
