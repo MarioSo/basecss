@@ -11,7 +11,7 @@
  */
 .box,
 %box {
-		display: block; /* [1] */
+		display: table-cell; /* [1] */
 		padding: $base-spacing-unit;
 
 		> :last-child {

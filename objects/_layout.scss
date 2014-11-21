@@ -18,27 +18,33 @@
 /**
  * Begin a layout group.
  */
+
 .layout,
 %layout {
-		@extend .clearfix;
-		list-style: none;
-		margin:  0;
-		padding: 0;
+    list-style: none;
+    margin:  0;
+    padding: 0;
+    // margin-left: -$inuit-layout-gutter;
 }
 
-		/**
-		 * 1. Cause columns to stack side-by-side.
-		 * 2. Full-width unless told to behave otherwise.
-		 * 3. Required to combine fluid widths and fixed gutters.
-		 */
-		.layout__item,
-		%layout__item {
-				float:left; /* [1] */
-				display:block; /* [2] */
+    /**
+     * 1. Cause columns to stack side-by-side.
+     * 2. Space columns apart.
+     * 3. Align columns to the tops of each other.
+     * 4. Full-width unless told to behave otherwise.
+     * 5. Required to combine fluid widths and fixed gutters.
+     */
+    .layout__item,
+    %layout__item {
+        display: inline-block; /* [1] */
+        // padding-left: $inuit-layout-gutter; /* [2] */
+        vertical-align: top; /* [3] */
+        width: 100%; /* [4] */
 
-				@if $global-border-box == false {
-						-webkit-box-sizing: border-box; /* [3] */
-							 -moz-box-sizing: border-box; /* [3] */
-										box-sizing: border-box; /* [3] */
-				}
-		}
+        @if $global-border-box == false {
+            -webkit-box-sizing: border-box; /* [5] */
+               -moz-box-sizing: border-box; /* [5] */
+                    box-sizing: border-box; /* [5] */
+        }
+
+    }

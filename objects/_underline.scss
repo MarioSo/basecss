@@ -1,0 +1,58 @@
+
+$u-color: $color-highlight !default;
+$u-size: 1px !default;
+
+%underline {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    padding-bottom: $u-size;
+    padding-bottom: 0;
+}
+
+    %underline:before,
+    %underline:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: $u-size;
+        width: 0;
+        background-color: $u-color;
+    }
+
+    %underline:before{
+        left: 0;
+        transition: width 0s ease, background .4s ease;
+
+    }
+    %underline:after{
+        right: 0;
+        transition: width .4s ease;
+
+    }
+
+%underline:hover:before {
+    width: 100%;
+    transition: width .4s ease;
+}
+
+%underline:hover:after{
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+
+
+// .sliding-u-l-r-l:before {
+// }
+// .sliding-u-l-r-l:after {
+// }
+// .sliding-u-l-r-l:hover:before {
+//     width: 100%;
+//     background: blue;
+//     transition: width .5s ease;
+// }
+// .sliding-u-l-r-l:hover:after {
+// }

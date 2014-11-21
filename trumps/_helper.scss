@@ -22,7 +22,7 @@
 /**
  * color your life.
  */
-.color--highlight { color: $primary-highlight-color !important; }
+.color--highlight { color: $color-highlight !important; }
 
 /**
  * Text alignment
@@ -34,7 +34,8 @@
 /**
  * Apply capital case to an element (usually a 'strong').
  */
-.caps {
+.caps,
+%caps {
 	text-transform: uppercase !important;
 }
 
@@ -53,6 +54,38 @@
 .hide{
 	display: none !important;
 }
+
+.center{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.v-center{
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.underline {
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-size: 0 0;
+	background-position: 0 24px;
+}
+.equal-height{
+	display: table-cell !important;
+}
+
+.fixed 		{	position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+.viewport-height {
+	min-height: 100vh;
+}//
+
 /**
  * Hide content off-screen without resorting to 'display:none;', also provide
  * breakpoint specific hidden elements.

@@ -91,19 +91,20 @@ $vertical-rhythm: true !default;
  * Generates margin and padding classes
  * for details see: trumps/spacing.
  */
-$generate-spacing: true !default;
-$generate-spacing-tiny: true !default;
-$generate-spacing-huge: true !default;
-$generate-spacing-flush: true !default;
+$generate-spacing: 				true !default;
+$generate-spacing-tiny: 	true !default;
+$generate-spacing-huge: 	true !default;
+$generate-spacing-flush: 	true !default;
 
 /**
  * color your life!
  */
-$base-text-color: #000;
-$base-background-color: #fff;
-$primary-highlight-color: #000 !default;
-
-
+// $base-text-color: #000;
+// $base-background-color: #fff;
+// $primary-highlight-color: #000 !default;
+$color-text: #000 !default;
+$color-background: #fff !default;
+$color-highlight: #000 !default;
 
 
 

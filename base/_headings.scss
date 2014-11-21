@@ -10,35 +10,41 @@
 h1,
 .alpha,
 %alpha {
-		@include font-size($h1-size);
+		@include font-size($h1-size, $h1-size);
+		font-family: $heading-font-family;
 }
 
 h2,
 .beta,
 %beta {
-		@include font-size($h2-size);
+		@include font-size($h2-size, $h2-size);
+		font-family: $heading-font-family;
 }
 
 h3,
 .gamma,
 %gamma {
-		@include font-size($h3-size);
+		@include font-size($h3-size, $h3-size);
+		font-family: $heading-font-family;
 }
 
 h4,
 .delta,
 %delta {
-		@include font-size($h4-size);
+		@include font-size($h4-size, $h4-size);
+		font-family: $heading-font-family;
 }
 
 h5,
 .epsilon,
 %epsilon {
-		@include font-size($h5-size);
+		@include font-size($h5-size, $h5-size);
+		font-family: $heading-font-family;
 }
 
 h6,
 .zeta,
 %zeta {
-		@include font-size($h6-size);
+		@include font-size($h6-size, $h6-size);
+		font-family: $heading-font-family;
 }
