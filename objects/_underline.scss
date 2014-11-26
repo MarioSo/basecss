@@ -2,7 +2,8 @@
 $u-color: $color-highlight !default;
 $u-size: 1px !default;
 
-%underline {
+%underline,
+.fixed-underline {
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -11,7 +12,8 @@ $u-size: 1px !default;
 }
 
     %underline:before,
-    %underline:after {
+    %underline:after,
+    .fixed-underline:after {
         content: '';
         display: block;
         position: absolute;
@@ -41,6 +43,12 @@ $u-size: 1px !default;
     width: 100%;
     background: transparent;
     transition: all 0s ease;
+}
+
+.fixed-underline:after {
+    // position: relative;
+    // margin-top: $half-spacing-unit;
+    width: 100%;
 }
 
 
