@@ -2,8 +2,7 @@
 $u-color: $color-highlight !default;
 $u-size: 1px !default;
 
-%underline,
-.fixed-underline {
+%underline {
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -12,8 +11,7 @@ $u-size: 1px !default;
 }
 
     %underline:before,
-    %underline:after,
-    .fixed-underline:after {
+    %underline:after {
         content: '';
         display: block;
         position: absolute;
@@ -44,23 +42,3 @@ $u-size: 1px !default;
     background: transparent;
     transition: all 0s ease;
 }
-
-.fixed-underline:after {
-    // position: relative;
-    // margin-top: $half-spacing-unit;
-    width: 100%;
-}
-
-
-
-// .sliding-u-l-r-l:before {
-// }
-// .sliding-u-l-r-l:after {
-// }
-// .sliding-u-l-r-l:hover:before {
-//     width: 100%;
-//     background: blue;
-//     transition: width .5s ease;
-// }
-// .sliding-u-l-r-l:hover:after {
-// }

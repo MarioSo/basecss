@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    #ORDERS A HAMBURGER MENU
+\*------------------------------------*/
+
+/**
+ * Creates a `.big-mac` class to style a hamburger menu
+ * Required markup:
+ * <div class="big-mac big-mac--rounded">
+    <div class="big-mac__bars"></div>
+  </div>
+ *
+ * For configuration options see variables below:
+ */
+
+$burger-color: $color-text !default;
+$burger-size: 44px !default;
+$burger-bar-height: $burger-size / 8 !default;
+$burger-offset: $burger-bar-height * 2 !default;
+$burger-bar-border-radius: 5px !default;
+
+$burger-transition-duration: 0.2s !default;
+$burger-transition-timing-func: ease-in-out !default;
+$burger-toggled-size: 0.85 !default;
+
+%bm__bar {
+  width: $burger-size;
+  height: $burger-bar-height;
+  background: $burger-color;
+  transition: all $burger-transition-duration $burger-transition-timing-func;
+  @if($burger-bar-border-radius != 0){
+    border-radius: $burger-bar-border-radius;
+  }
+}
+
+.big-mac {
+  position: relative;
+  height: ($burger-offset*2) + $burger-bar-height;
+  width: $burger-size;
+}
+
+  .big-mac__bars {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -($burger-bar-height/2);
+    @extend %bm__bar;
+    transition: all $burger-transition-duration $burger-transition-timing-func;
+
+    &:before,
+    &:after {
+      @extend %bm__bar;
+      content: "";
+      position: absolute;
+    }
+
+    &:before {
+      transform: translate3d(0, -$burger-offset,0);
+     }
+    &:after {
+      transform: translate3d(0, $burger-offset,0);
+     }
+  }
+
+.open .big-mac__bars {
+  background-color: transparent;
+  transform: scale($burger-toggled-size);
+  &:before {
+    transform: rotate(45deg) scale($burger-toggled-size);
+  }
+
+  &:after {
+    transform: rotate(-45deg) scale($burger-toggled-size);
+  }
+}

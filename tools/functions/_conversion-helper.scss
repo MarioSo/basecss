@@ -13,6 +13,10 @@
  *
  * Usage: margin-right: pem(16);
 */
-@function pem($pxval, $base: $base-font-size) {
+@function px-to-em($pxval, $base: $base-font-size) {
 	@return #{$pxval / $base}em;
+}
+
+@function px-to-rem($pxval) {
+	@return #{$pxval / $base-font-size}rem;
 }
