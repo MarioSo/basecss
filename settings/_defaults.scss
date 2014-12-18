@@ -87,14 +87,7 @@ $line-height-ratio: $base-line-height / $base-font-size;
 $vertical-rhythm: true !default;
 
 
-/*
- * Generates margin and padding classes
- * for details see: trumps/spacing.
- */
-$generate-spacing: 				true !default;
-$generate-spacing-tiny: 	true !default;
-$generate-spacing-huge: 	true !default;
-$generate-spacing-flush: 	true !default;
+
 
 /**
  * color your life!
@@ -108,34 +101,16 @@ $color-highlight: #000 !default;
 
 
 
+
+
+
+
+
+
+
 /*------------------------------------*\
-	$RESPONSIVE
+    #RESPONSIVE-SETTINGS
 \*------------------------------------*/
-// $site-is-responsive: true!default;
-
-/**
- * Tell base.css when breakpoints start.
- */
-$lap-start:         320px!default;
-$lap-start:         481px!default;
-$desk-start:        1024px!default;
-$desk-wide-start:   1200px!default;
-
-
-// $mq-map: (
-//   phone: (0, $mobile-start - 1px),
-//   mobile: ($mobile-start, $palm-start - 1px),
-//   palm: ($palm-start, $lap-start - 1px),
-//   lap: ($lap-start, $desk-start - 1px),
-//   desk: ($desk-start, $desk-wide-start - 1px),
-//   desk-wide: ($desk-wide-start, $desk-giga-start - 1px),
-//   desk-giga: ($desk-giga-start, $cinema-start - 1px),
-//   cinema: ($cinema-start, 9999px)
-// ) !default;
-//
-// ///*------------------------------------*\
-//    #SETTINGS-RESPONSIVE
-//\*------------------------------------*/
 
 // Hold our breakpoint aliases and conditions in a list.
 $breakpoints: (
@@ -148,30 +123,130 @@ $breakpoints: (
 ) !default;
 
 
+
+
+/**
+ * (RESPONSIVE) SPACING
+ *
+ * Spacing is based on `$base-spacing-unit`. Available options:
+ * - quarter
+ * - half
+ * - double
+ * - none
+ *
+ * Usage:
+ * `.(m|p)(t|r|b|l|h|v)(-|+|0)` = margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+
+
+$basecss-enable-margins:											true !default;
+$basecss-enable-margins--quarter:							false !default;
+$basecss-enable-margins--half:								false !default;
+$basecss-enable-margins--double:							false !default;
+$basecss-enable-margins--quadruple:						false !default;
+$basecss-enable-margins--none:								true !default;
+
+$basecss-enable-margins--negative:						false !default;
+$basecss-enable-margins--negative-quarter:		false !default;
+$basecss-enable-margins--negative-half:				false !default;
+$basecss-enable-margins--negative-double:			false !default;
+$basecss-enable-margins--negative-quadruple:	false !default;
+
+$basecss-enable-paddings:											true !default;
+$basecss-enable-paddings--quarter:						false !default;
+$basecss-enable-paddings--half:								false !default;
+$basecss-enable-paddings--double:							false !default;
+$basecss-enable-paddings--quadruple:					false !default;
+$basecss-enable-paddings--none:								true !default;
+
+/*
+ * By default only the base classes are generated.
+ * To create spacing classes based on media-queries
+ * set `$breakpoints-spacing: $breakpoints` in your config
+ * file.
+ */
+$breakpoints-spacing: $breakpoints !default;
+
+$basecss-enable-responsive-margins:											true !default;
+$basecss-enable-responsive-margins--quarter:						false !default;
+$basecss-enable-responsive-margins--half:								false !default;
+$basecss-enable-responsive-margins--double:							false !default;
+$basecss-enable-responsive-margins--quadruple:					false !default;
+$basecss-enable-responsive-margins--none:								true !default;
+
+$basecss-enable-responsive-margins--negative:						false !default;
+$basecss-enable-responsive-margins--negative-quarter:		false !default;
+$basecss-enable-responsive-margins--negative-half:			false !default;
+$basecss-enable-responsive-margins--negative-double:		false !default;
+$basecss-enable-responsive-margins--negative-quadruple:	false !default;
+
+$basecss-enable-responsive-paddings:										true !default;
+$basecss-enable-responsive-paddings--quarter:						false !default;
+$basecss-enable-responsive-paddings--half:							false !default;
+$basecss-enable-responsive-paddings--double:						false !default;
+$basecss-enable-responsive-paddings--quadruple:					false !default;
+$basecss-enable-responsive-paddings--none:							true !default;
+
+
+$basecss-spacing: $base-spacing-unit !default;
+
+$basecss-spacing-quarter: 		quarter($base-spacing-unit) !default;
+$basecss-spacing-half: 				half($base-spacing-unit) !default;
+$basecss-spacing-double: 			double($base-spacing-unit) !default;
+$basecss-spacing-quadruple: 	quadruple($base-spacing-unit) !default;
+
+
 $responsive-settings: true !default;
 
 
 
+/**
+ * RESPONSIVE WIDTHS
+ *
+ * Generate width classes.
+ *
+ * Example Usage: `.1/2`, `.desk-1/4`
+ */
 
-// If we have included this file, set a variable to tell the rest of the
-// framework that we have some responsive settings.
-// $inuit-responsive-settings: true;
-
+/**
+ * enables 1/1 and 1/2
+ */
 $use-fractions:          true !default;
 
-$responsive-thirds:		true !default;
-$responsive-quarters:	false !default;
-$responsive-fifths: 	false !default;
-$responsive-sixths: 	false !default;
+$responsive-thirds:			false !default;
+$responsive-quarters:		false !default;
+$responsive-fifths: 		false !default;
+$responsive-sixths: 		false !default;
 $responsive-sevenths:   false !default;
-$responsive-eighths: 	false !default;
-$responsive-ninths: 	false !default;
-$responsive-tenths: 	false !default;
+$responsive-eighths: 		false !default;
+$responsive-ninths: 		false !default;
+$responsive-tenths: 		false !default;
 $responsive-twelfths:   false !default;
 
 
-
-
+/*------------------------------------*\
+	$MANAGIN Z-INDEX
+\*------------------------------------*/
+/**
+ * usage:
+ *
+ * .foo {
+ * 	z-index: z('first-floor')
+ * }
+ */
+$z-layers: (
+	"sky": 							1000,
+	"modal": (
+		"base": 					500,
+		"close": 					100,
+		"header": 				50,
+		"footer": 				25
+	),
+	"base": 						10,
+	"default": 					1,
+	"below": 						-1,
+	"bottomless-pit": 	-9000
+) !default;
 
 
 

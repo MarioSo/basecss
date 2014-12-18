@@ -21,7 +21,7 @@
 		@return round($number / 4);
 }
 
-@function halve($number) {
+@function half($number) {
 		@return round($number / 2);
 }
 

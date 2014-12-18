@@ -1,0 +1,22 @@
+/*------------------------------------*\
+		$MANAGING Z-INDEX
+\*------------------------------------*/
+
+
+// A function helper to avoid having to type `map-get($z-layers, ...)`
+// ---
+// @param [string] $component: the layer to use
+// ---
+// @return [number] | [null]
+
+@function z($layer, $sub-layer: '') {
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No z-index found in $z-layers map for `#{$layer}`. Property omitted.";
+  }
+
+	@if $sub-layer != '' {
+  		@return map-get(map-get($z-layers, $layer), $sub-layer);
+	} @else {
+  		@return map-get($z-layers, $layer);
+	}
+}

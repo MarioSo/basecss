@@ -9,6 +9,15 @@
  * `$inuit-use-fractions` variable defined below.
  */
 
+$responsive-thirds:			false !default;
+$responsive-quarters:		false !default;
+$responsive-fifths: 		false !default;
+$responsive-sixths: 		false !default;
+$responsive-sevenths:   false !default;
+$responsive-eighths: 		false !default;
+$responsive-ninths: 		false !default;
+$responsive-tenths: 		false !default;
+$responsive-twelfths:   false !default;
 
 
 @mixin grid-setup($namespace: "") {
@@ -16,8 +25,7 @@
 	/**
 	 * Whole.
 	 */
-	[class~="#{$namespace}1/1"],
-	.#{$namespace}full					     			{ width: 100%; }
+	[class~="#{$namespace}1/1"] 				{ width: 100%; }
 
 	/**
 	 * Halves.
