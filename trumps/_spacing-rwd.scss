@@ -33,7 +33,7 @@ $basecss-generate-spacing-alias: "";
 				// for retina devices. Exclude retina media-qeuries manually.
 				@if ($basecss-generate-spacing-alias != "retina") {
 
-						@include media-query($basecss-generate-spacing-alias) {
+						@include respond-to($basecss-generate-spacing-alias) {
 								@content;
 						} // Close media query.
 

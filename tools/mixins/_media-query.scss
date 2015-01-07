@@ -24,7 +24,7 @@
 //
 // }
 
-@mixin media-query($mq) {
+@mixin respond-to($mq) {
 
 	$breakpoint-found: false;
 

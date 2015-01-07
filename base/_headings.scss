@@ -12,6 +12,7 @@ h1,
 %alpha {
 		@include font-size($h1-size, $h1-size);
 		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
 }
 
 h2,
@@ -19,6 +20,7 @@ h2,
 %beta {
 		@include font-size($h2-size, $h2-size);
 		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
 }
 
 h3,
@@ -26,6 +28,7 @@ h3,
 %gamma {
 		@include font-size($h3-size, $h3-size);
 		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
 }
 
 h4,
@@ -33,6 +36,7 @@ h4,
 %delta {
 		@include font-size($h4-size, $h4-size);
 		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
 }
 
 h5,
@@ -40,6 +44,7 @@ h5,
 %epsilon {
 		@include font-size($h5-size, $h5-size);
 		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
 }
 
 h6,
@@ -47,4 +52,5 @@ h6,
 %zeta {
 		@include font-size($h6-size, $h6-size);
 		font-family: $heading-font-family;
+		font-weight: $heading-font-weight;
 }

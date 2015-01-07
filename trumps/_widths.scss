@@ -160,7 +160,7 @@ $responsive-twelfths:   false !default;
 			// This isn’t ideal, but we definitely don’t want to generate widths
 			// for retina devices. Exclude retina media-qeuries manually.
 			@if ($alias != "retina") {
-				@include media-query($alias) {
+				@include respond-to($alias) {
 					@include grid-setup('#{$alias}-');
 				}
 			}

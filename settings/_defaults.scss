@@ -45,6 +45,8 @@ $base-font-size:    16px !default;
 $base-line-height:  20px !default;
 $base-font-family:  sans-serif !default;
 
+$heading-font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif !default;
+$heading-font-weight: normal !default;
 /*
  * Lead paragraph for introductory texts (usualla a paragraph
  * which is slightly larger)
@@ -231,7 +233,7 @@ $responsive-twelfths:   false !default;
  * usage:
  *
  * .foo {
- * 	z-index: z('first-floor')
+ * 	z-index: z('first-floor');
  * }
  */
 $z-layers: (
@@ -247,8 +249,6 @@ $z-layers: (
 	"below": 						-1,
 	"bottomless-pit": 	-9000
 ) !default;
-
-
 
 /*------------------------------------*\
 	$OBJECTS AND ABSTRACTIONS
