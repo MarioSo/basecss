@@ -56,15 +56,10 @@
 }
 
 .center{
-	display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.v-center{
-	display: flex;
-  flex-direction: column;
-  justify-content: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .underline {
@@ -82,7 +77,7 @@
 .relative { position: relative; }
 .absolute { position: absolute; }
 
-.viewport-height {
+.vh {
 	min-height: 100vh;
 }//
 
