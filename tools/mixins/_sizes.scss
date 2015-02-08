@@ -23,7 +23,6 @@ Examples:
 	$values: ();
 	$sublists: false;
 	@each $s in $sizes {
-		/* unwrap lists for values that have multiple list of values such as text-shadow */
 		@if type-of($s) == list {
 			$sublists: true;
 			$vv: ();

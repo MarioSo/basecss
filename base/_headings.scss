@@ -7,50 +7,23 @@
  * stranded heading hierarchy: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
  */
 
-h1,
-.alpha,
-%alpha {
-		@include font-size($h1-size, $h1-size);
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight;
-}
+// Fromat:
+//  h1,
+// .alpha,
+// %alpha {
+// 		@include font-size($h1-size, $h1-lineheight);
+// 		font-family: $heading-font-family;
+// 		// font-weight: $heading-font-weight;
+// }
 
-h2,
-.beta,
-%beta {
-		@include font-size($h2-size, $h2-size);
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight;
-}
-
-h3,
-.gamma,
-%gamma {
-		@include font-size($h3-size, $h3-size);
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight;
-}
-
-h4,
-.delta,
-%delta {
-		@include font-size($h4-size, $h4-size);
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight;
-}
-
-h5,
-.epsilon,
-%epsilon {
-		@include font-size($h5-size, $h5-size);
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight;
-}
-
-h6,
-.zeta,
-%zeta {
-		@include font-size($h6-size, $h6-size);
-		font-family: $heading-font-family;
-		font-weight: $heading-font-weight;
+$i: 1;
+@each $name, $props in $headings {
+	h#{$i},
+	.#{$name},
+	%#{$name} {
+		@include font-size(map-get($props, font-size), map-get($props, line-height));
+		font-family: map-get($props, font-family);
+		font-weight: map-get($props, font-weight);
+	}
+	$i: $i + 1;
 }
