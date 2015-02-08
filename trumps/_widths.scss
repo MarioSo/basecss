@@ -1,69 +1,52 @@
-/*------------------------------------*\
-		#WIDTHS
-\*------------------------------------*/
+/// -------------------------------------
+/// #WIDTHS
+/// -------------------------------------
 
-/**
- * A series of width helper classes that you can use to size things like grid
- * systems. Classes can take a fraction-like format (e.g. `.2/3`) or a spoken-
- * word format (e.g. `two-thirds`). Toggle formats by overriding the
- * `$inuit-use-fractions` variable defined below.
- */
 
-$responsive-thirds:			false !default;
-$responsive-quarters:		false !default;
-$responsive-fifths: 		false !default;
-$responsive-sixths: 		false !default;
-$responsive-sevenths:   false !default;
-$responsive-eighths: 		false !default;
-$responsive-ninths: 		false !default;
-$responsive-tenths: 		false !default;
-$responsive-twelfths:   false !default;
+/// A series of width helper classes that you can use to size things like grid
+/// systems. Classes can take a fraction-like format (e.g. `.2/3`) or a spoken-
+/// word format (e.g. `two-thirds`). Toggle formats by overriding the
+/// `$inuit-use-fractions` variable defined below.
+
 
 
 @mixin grid-setup($namespace: "") {
 
-	/**
-	 * Whole.
-	 */
+	 /// Whole.
 	[class~="#{$namespace}1/1"] 				{ width: 100%; }
 
-	/**
-	 * Halves.
-	 */
+
+	/// Halves.
 	[class~="#{$namespace}1/2"]					{ width: 50%; }
 
 
-	@if $responsive-thirds == true {
-		/**
-		 * Thirds.
-		 */
+	@if $widths-thirds == true {
+
+		/// Thirds.
 		[class~="#{$namespace}1/3"] 				{ width: 33.3333333%; }
 		[class~="#{$namespace}2/3"] 				{ width: 66.6666666%; }
 	}
 
-	@if $responsive-quarters == true {
-		/**
-		 * Quarters.
-		 */
+	@if $widths-quarters == true {
+
+		/// Quarters.
 		[class~="#{$namespace}1/4"] 				{ width: 25%; }
 		[class~="#{$namespace}2/4"] 				{ width: 50%; }
 		[class~="#{$namespace}3/4"] 				{ width: 75%; }
 	}
 
-	@if $responsive-fifths == true {
-		/**
-		 * Fifths.
-		 */
+	@if $widths-fifths == true {
+
+		/// Fifths.
 		[class~="#{$namespace}1/5"]			{ width: 20%; }
 		[class~="#{$namespace}2/5"]			{ width: 40%; }
 		[class~="#{$namespace}3/5"]			{ width: 60%; }
 		[class~="#{$namespace}4/5"]			{ width: 80%; }
 	}
 
-	@if $responsive-sixths == true {
-		/**
-		 * Sixths.
-		 */
+	@if $widths-sixths == true {
+
+		/// Sixths.
 		[class~="#{$namespace}1/6"]			 { width: 16.6666666%; }
 		[class~="#{$namespace}2/6"]			 { width: 33.3333333%; }
 		[class~="#{$namespace}3/6"]			 { width: 50%; }
@@ -71,10 +54,9 @@ $responsive-twelfths:   false !default;
 		[class~="#{$namespace}5/6"]			 { width: 83.3333333%; }
 	}
 
-	@if $responsive-sevenths == true {
-		/**
-		 * Sevenths.
-		 */
+	@if $widths-sevenths == true {
+
+		/// Sevenths.
 		[class~="#{$namespace}1/7"]       { width: 14.2857142857%; }
 		[class~="#{$namespace}2/7"]       { width: 28.5714285714%; }
 		[class~="#{$namespace}3/7"]       { width: 42.8571428571%; }
@@ -84,10 +66,9 @@ $responsive-twelfths:   false !default;
 	}
 
 
-	@if $responsive-eighths == true {
-		/**
-		 * Eighths.
-		 */
+	@if $widths-eighths == true {
+
+		/// Eighths.
 		[class~="#{$namespace}1/8"]       { width: 12.5%; }
 		[class~="#{$namespace}2/8"]       { width: 25%; }
 		[class~="#{$namespace}3/8"]       { width: 37.5%; }
@@ -97,10 +78,9 @@ $responsive-twelfths:   false !default;
 		[class~="#{$namespace}7/8"]       { width: 87.5%; }
 	}
 
-	@if $responsive-ninths == true {
-		/**
-		 * Ninths.
-		 */
+	@if $widths-ninths == true {
+
+		/// Ninths.
 		[class~="#{$namespace}1/9"]       { width: 11.1111111%; }
 		[class~="#{$namespace}2/9"]       { width: 22.2222222%; }
 		[class~="#{$namespace}3/9"]       { width: 33.3333333%; }
@@ -111,10 +91,9 @@ $responsive-twelfths:   false !default;
 		[class~="#{$namespace}8/9"]       { width: 88.8888888%; }
 	}
 
-	@if $responsive-tenths == true {
-		/**
-		 * Tenths.
-		 */
+	@if $widths-tenths == true {
+
+		/// Tenths.
 		[class~="#{$namespace}1/10"]      { width: 10%; }
 		[class~="#{$namespace}2/10"]      { width: 20%; }
 		[class~="#{$namespace}3/10"]      { width: 30%; }
@@ -126,10 +105,9 @@ $responsive-twelfths:   false !default;
 		[class~="#{$namespace}9/10"]      { width: 90%; }
 	}
 
-	@if $responsive-twelfths == true {
-		/**
-		 * Twelfths.
-		 */
+	@if $widths-twelfths == true {
+
+		 ///Twelfths.
 		[class~="#{$namespace}1/12"]      { width:  8.3333333%; }
 		[class~="#{$namespace}2/12"]      { width: 16.666666%; }
 		[class~="#{$namespace}3/12"]      { width: 25%; }
@@ -142,29 +120,28 @@ $responsive-twelfths:   false !default;
 		[class~="#{$namespace}10/12"]     { width: 83.3333333%; }
 		[class~="#{$namespace}11/12"]     { width: 91.6666666%; }
 	}
-} // end grid-setup
-
+} /// end grid-setup
 
 @if $use-fractions == true {
 
-	// Generates the non-responsive grid system
+	/// Generates the non-responsive grid system
 	@include grid-setup();
 
-
-
-	@if $responsive-settings == true{
-		@each $breakpoint in $breakpoints {
-			$alias:     nth($breakpoint, 1);
-			$condition: nth($breakpoint, 2);
-
-			// This isn’t ideal, but we definitely don’t want to generate widths
-			// for retina devices. Exclude retina media-qeuries manually.
-			@if ($alias != "retina") {
-				@include respond-to($alias) {
-					@include grid-setup('#{$alias}-');
+	@if $responsive-settings == true {
+		@each $name, $breakpoint in $grid-breakpoints {
+			@if (length($breakpoint) == 1){
+				@include respond-to(nth($breakpoint, 1)) {
+					@include grid-setup('#{$name}-');
+				}
+			} @else if (length($breakpoint) == 2){
+				@include respond-to(nth($breakpoint, 1), nth($breakpoint, 2)) {
+					@include grid-setup('#{$name}-');
+				}
+			} @else if (length($breakpoint) == 3){
+				@include respond-to(nth($breakpoint, 1), nth($breakpoint, 2), nth($breakpoint, 3)) {
+					@include grid-setup('#{$name}-');
 				}
 			}
 		}
-
 	}
-} // Close fractions @if.
+} /// Close fractions @if.

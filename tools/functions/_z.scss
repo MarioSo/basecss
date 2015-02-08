@@ -1,14 +1,11 @@
-/*------------------------------------*\
-		$MANAGING Z-INDEX
-\*------------------------------------*/
+/// -------------------------------------
+/// $Z-INDEX
+/// -------------------------------------
 
 
-// A function helper to avoid having to type `map-get($z-layers, ...)`
-// ---
-// @param [string] $component: the layer to use
-// ---
-// @return [number] | [null]
-
+/// A function helper to avoid having to type `map-get($z-layers, ...)`
+/// @param [string] $component: the layer to use
+/// @return [number] | [null]
 @function z($layer, $sub-layer: '') {
 
 	@if map-has-key($z-layers, $layer) {

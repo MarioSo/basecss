@@ -1,55 +1,45 @@
-/*------------------------------------*\
-		#LAYOUT
-\*------------------------------------*/
+///--------------------------------------
+/// #LAYOUT
+///--------------------------------------
 
-/**
- * The basecss layout system uses `box-sizing: border-box;` and
- * `float: left;` for its grid system. Combine the layout items with
- * the widths found in `trumps/widths`.
- *
- * Usage:
- * <div class="layout">
- * 	<div class="layout__item 1/2"> 1st Half </div>
- * 	<div class="layout__item 1/2"> 2nd Half </div>
- * </div>
- *
- */
+/// The basecss layout system uses `box-sizing: border-box;` and
+/// `float: left;` for its grid system. Combine the layout items with
+/// the widths found in `trumps/widths`.
+///
+/// Usage:
+/// <div class="layout">
+/// 	<div class="layout__item 1/2"> 1st Half </div>
+/// 	<div class="layout__item 1/2"> 2nd Half </div>
+/// </div>
+///
 
-/**
- * Begin a layout group.
- */
-
-.layout,
-%layout {
+/// Begin a layout group.
+.layout-wrapper,
+%layout-wrapper {
     list-style: none;
     margin:  0;
     padding: 0;
-    // margin-left: -$inuit-layout-gutter;
 }
 
-    /**
-     * 1. Cause columns to stack side-by-side.
-     * 2. Space columns apart.
-     * 3. Align columns to the tops of each other.
-     * 4. Full-width unless told to behave otherwise.
-     * 5. Required to combine fluid widths and fixed gutters.
-     */
-    .layout__item,
-    %layout__item {
-        display: inline-block; /* [1] */
-        // padding-left: $inuit-layout-gutter; /* [2] */
-        vertical-align: top; /* [3] */
-        width: 100%; /* [4] */
+     /// 1. Cause columns to stack side-by-side.
+     /// 2. Align columns to the tops of each other.
+     /// 3. Full-width unless told to behave otherwise.
+     /// 4. Required to combine fluid widths and fixed gutters.
+    .layout,
+    %layout {
+        display: inline-block; /// [1]
+        vertical-align: top; /// [2]
+        width: 100%; /// [3]
 
         @if $global-border-box == false {
-            -webkit-box-sizing: border-box; /* [5] */
-               -moz-box-sizing: border-box; /* [5] */
-                    box-sizing: border-box; /* [5] */
+            -webkit-box-sizing: border-box; /// [4]
+               -moz-box-sizing: border-box; /// [4]
+                    box-sizing: border-box; /// [4]
         }
 
     }
 
-    .layout__item--width-auto,
-    %layout__item--width-auto {
+    .layout--fluid,
+    %layout--fluid {
         width: auto;
     }

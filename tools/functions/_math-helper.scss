@@ -1,22 +1,18 @@
-/*------------------------------------*\
-		$MATH HELPER
-\*------------------------------------*/
-/**
- * Doing some math.
- */
+/// -------------------------------------
+/// $MATH-HELPER
+/// -------------------------------------
 
 
-/*
- * Halve and double numbers, returning rounded integers.
- *
- * Usage:
- * .foo {
- * 	padding: quarter(4px);
- * 	padding: halve(4px);
- * 	padding: double(4px);
- * 	padding: quadruple(4px);
- * }
- */
+///
+/// Halve and double numbers, returning rounded integers.
+///
+/// Usage:
+/// .foo {
+/// 	padding: quarter(4px);
+/// 	padding: halve(4px);
+/// 	padding: double(4px);
+/// 	padding: quadruple(4px);
+/// }
 @function quarter($number) {
 		@return round($number / 4);
 }
