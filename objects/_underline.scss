@@ -1,12 +1,12 @@
 
 $u-color: $color-highlight !default;
-$u-size: 1px !default;
+// $u-size: 0.053em !default; /// 19px - 1px
+$u-size: 1px !default; /// 19px - 1px
 
 %underline {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    padding-bottom: $u-size;
     padding-bottom: 0;
 }
 
@@ -15,10 +15,12 @@ $u-size: 1px !default;
         content: '';
         display: block;
         position: absolute;
-        bottom: 0.15em;
+        bottom: 0.125em;
         height: $u-size;
+        min-height: 1px;
         width: 0;
         background-color: $u-color;
+        z-index: -1;
     }
 
     %underline:before{
