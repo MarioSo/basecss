@@ -12,9 +12,18 @@
  */
 
 
-/**
- * Add/remove floats
- */
+/// make it a block
+.block,
+%block {
+	display: block;
+}
+
+/// include padding
+.bb{
+	box-sizing: border-box !important;
+}
+
+///Add/remove floats
 .float					{ float: left !important; }
 .float--right		{ float: right !important; }
 .float--none		{ float: none !important; }
@@ -24,16 +33,13 @@
  */
 .color--highlight { color: $color-highlight !important; }
 
-/**
- * Text alignment
- */
+
+/// Text alignment
 .text--left     { text-align: left !important; }
 .text--center   { text-align: center !important; }
 .text--right    { text-align: right !important; }
 
-/**
- * Apply capital case to an element (usually a 'strong').
- */
+/// Apply capital case to an element (usually a 'strong').
 .caps,
 %caps {
 	text-transform: uppercase !important;
@@ -43,10 +49,8 @@
 	text-transform: lowercase !important;
 }
 
-.bb{
-	box-sizing: border-box !important;
-}
-
+/// performance hack
+/// see: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
 .will-animate{
 	transform: translate3d(0, 0, 0);
 }
@@ -60,6 +64,12 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
+}
+
+.v-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .underline {

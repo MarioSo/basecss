@@ -1,19 +1,37 @@
 /*------------------------------------*\
-    #LIST-INLINE
+    #LISTS
 \*------------------------------------*/
 
 /**
- * The list-inline object simply displays a list of items in one line.
+ * Lists
  */
+$color-list-zebra: $color-highlight !default;
 
-.list-inline,
-%list-inline {
-    margin:  0;
-    padding: 0;
-    list-style: none;
+// .list-inline,
+// %list-inline {
+//     margin:  0;
+//     padding: 0;
+//     list-style: none;
 
-    > li {
-        display: inline-block;
-    }
+//     > li {
+//         display: inline-block;
+//     }
 
+// }
+
+.list {
+	 margin: 0;
+	 padding: 0;
+}
+
+.list__link {
+	color: inherit;
+}
+
+.list--inline .list__item {
+	display: inline-block;
+}
+
+.list--zebra .list__item:nth-child(even) {
+	background-color: $color-list-zebra;
 }
