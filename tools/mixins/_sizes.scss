@@ -39,8 +39,8 @@
 	@each $prop in $props { #{$prop}: $value }
 }
 
-@mixin font-size($fontSize, $lineHeight: auto){
-	@include scale(font-size, $fontSize);
+@mixin font-size($fontSize, $lineHeight: auto, $base: $base-font-size){
+	@include scale(font-size, $fontSize, $base);
 	@if $lineHeight != auto {
 		@include scale(line-height, $lineHeight, $fontSize);
 	}
