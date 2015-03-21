@@ -1,6 +1,5 @@
 
-$u-color: $color-highlight !default;
-// $u-size: 0.053em !default; /// 19px - 1px
+$u-color: purple !default;
 $u-size: 1px !default; /// 19px - 1px
 
 %underline {
@@ -34,12 +33,14 @@ $u-size: 1px !default; /// 19px - 1px
 
     }
 
-%underline:hover:before {
+%underline:hover:before,
+.is-underlined:before {
     width: 100%;
     transition: width .4s ease;
 }
 
-%underline:hover:after{
+%underline:hover:after,
+.is-underlined:after {
     width: 100%;
     background: transparent;
     transition: all 0s ease;
