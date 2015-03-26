@@ -6,7 +6,7 @@
  *
  */
 
-@mixin color($c-name, $c-alpha: 1, $property: 'color') {
+@mixin color($c-name, $property: 'color', $c-alpha: 1) {
 	$color: map-get($colors, $c-name);
 	#{$property}: $color;
 
