@@ -51,7 +51,8 @@
 
 /// performance hack
 /// see: http://aerotwist.com/blog/on-translate3d-and-layer-creation-hacks/
-.will-animate{
+.will-animate,
+%will-animate {
 	transform: translate3d(0, 0, 0);
 }
 
@@ -70,6 +71,12 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.h-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .underline {
@@ -94,6 +101,10 @@
 .fullscreen {
 	width: 100%;
 	height: 100vh;
+}
+
+.oh {
+	overflow: hidden;
 }
 
 /**
