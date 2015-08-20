@@ -15,11 +15,11 @@
 /// make it a block
 .block,
 %block {
-	display: block;
+	display: block !important;
 }
 
 /// include padding
-.bb{
+.bb {
 	box-sizing: border-box !important;
 }
 
@@ -79,20 +79,8 @@
 	transform: translateX(-50%);
 }
 
-.underline {
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
-	background-repeat: repeat-x;
-	background-size: 2px 2px;
-	background-size: 0 0;
-	background-position: 0 24px;
-}
-.equal-height{
-	display: table-cell !important;
-}
 
-.fixed 		{	position: fixed; }
 .relative { position: relative; }
-.absolute { position: absolute; }
 
 .vh {
 	min-height: 100vh;
@@ -105,22 +93,4 @@
 
 .oh {
 	overflow: hidden;
-}
-
-/**
- * Hide content off-screen without resorting to 'display:none;', also provide
- * breakpoint specific hidden elements.
- */
-@mixin visuallyhidden {
-	border: 0 !important;
-	clip: rect(0 0 0 0) !important;
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-}
-.visuallyhidden {
-	@include visuallyhidden;
 }
