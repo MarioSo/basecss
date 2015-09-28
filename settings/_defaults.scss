@@ -63,7 +63,7 @@ $headings: (
 	alpha: (
 		font-size:   42px,
 		line-height: 48px,
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif,
+		font-family: ('Helvetica Neue', Helvetica, Arial, sans-serif),
 		font-weight: normal
 	),
 	beta: (
@@ -279,6 +279,7 @@ $basecss-spacing-quadruple: 	quadruple($base-spacing-unit) !default;
 /// 	z-index: z('first-floor');
 /// }
 $z-layers: (
+	"moon": 					4000,
 	"sky": 						1000,
 	"modal": (
 		"up": 					100,

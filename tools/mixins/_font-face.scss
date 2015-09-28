@@ -1,0 +1,59 @@
+////
+/// Font-face importer (FFI)
+/// @author Hugo Giraudel
+////
+
+/// Default path to locate font files
+/// @type String
+/// @access public
+$ffi-font-path: '/fonts' !default;
+
+/// List storing all the fonts to import
+/// Each item is a map with keys `name`, `src`, `weight` (optional) and `style` (optional)
+/// @type List
+/// @access public
+$ffi-fonts: () !default;
+
+/// Mixin to import a single font
+/// @param {String} $name - Name of the font to import
+/// @param {List} $src - Sources of the font to import
+/// @param {String | Number} $weight [normal] - Weight of the font to import
+/// @param {String | Number} $style [normal] - Style of the font to import
+/// @access public
+@mixin ffi-font-face($name, $src, $weight: normal, $style: normal) {
+  ///@at-root {
+    @font-face {
+      font-family: $name;
+      src: $src;
+      font-weight: unquote($weight);
+      font-style: unquote($style);
+    }
+  ///}
+}
+
+/// Mixin to import several fonts at once
+/// @param {List} $fonts - Fonts to import
+/// @access public
+@mixin ffi-batch-font-face($fonts) {
+  @each $font in $fonts {
+    $font: map-merge($font, (
+      'src': ffi-get-src($font)
+    ));
+
+    @include ffi-font-face($font...);
+  }
+}
+
+/// Function to build a valid `src` from a map of sources
+/// @param {Map} $font - Font to build the source for
+/// @return {List}
+/// @access private
+@function ffi-get-src($font) {
+  $src: ();
+
+  @each $format, $filename in map-get($font, 'src') {
+    $src: append($src, url($ffi-font-path + '/' + $filename) unquote(format(quote($format))), 'comma');
+  }
+
+  @return $src;
+}

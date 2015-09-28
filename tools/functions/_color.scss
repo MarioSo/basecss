@@ -1,0 +1,20 @@
+/// -------------------------------------
+/// $Z-INDEX
+/// -------------------------------------
+
+
+/// A function helper to avoid having to type `map-get($z-layers, ...)`
+/// @param [string] $component: the layer to use
+/// @return [number] | [null]
+@function color($layer, $sub-layer: '') {
+
+	@if map-has-key($colors, $layer) {
+		@if $sub-layer != '' {
+				@return map-get(map-get($colors, $layer), $sub-layer);
+		} @else {
+				@return map-get($colors, $layer);
+		}
+	} @else {
+		@warn "No z-index found in $colors map for `#{$layer}`. Property omitted.";
+	}
+}
